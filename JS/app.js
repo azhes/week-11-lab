@@ -1,5 +1,17 @@
-const todoList = [ {todo: "turn Anakin to the Dark Side", status: "complete"},
-{todo: "duel Master Yoda", status: "complete"}, {todo: "built Death Star",
-status: "started"} ]
+const todoList = [ {todo: "do thing 1", status: "complete"},
+{todo: "do thing 2", status: "complete"}, 
+{todo: "do thing 3", status: "started"},
+{todo: "do thing 4", status: "started"} ]
 
 let completedTodos = []
+
+for (const i of todoList) {
+    if (i.status === "complete") {
+        completedTodos.push(i)
+    }
+}
+
+for (const i of completedTodos) {
+    const {todo} = i
+    console.log(todo)
+}
